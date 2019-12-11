@@ -1,0 +1,3 @@
+{
+  "mongoURI": "mongodb+srv://azkura:azkura@devhome-c2dbw.mongodb.net/test?retryWrites=true&w=majority"
+}
