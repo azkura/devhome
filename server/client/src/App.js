@@ -1,8 +1,14 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import './App.css';
 
-function App() {
-  return <div className='App'></div>;
-}
+import { Navbar } from './components/layout/Navbar';
+import { Landing } from './components/layout/Landing';
+
+const App = () => (
+  <Fragment>
+    <Navbar />
+    <Landing />
+  </Fragment>
+);
 
 export default App;
