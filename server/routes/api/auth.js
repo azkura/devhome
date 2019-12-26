@@ -32,9 +32,8 @@ router.post(
   ],
   async (req, res) => {
     const errors = validationResult(req);
-
     if (!errors.isEmpty()) {
-      res.status(400).json({ errors: errors.array() });
+      return res.status(400).json({ errors: errors.array() });
     }
 
     const { email, password } = req.body;
@@ -73,9 +72,9 @@ router.post(
           res.json({ token });
         }
       );
-    } catch (error) {
-      console.error(error.message);
-      res.status(500).send('Server Error');
+    } catch (err) {
+      console.error(err.message);
+      res.status(500).send('Server error');
     }
   }
 );
